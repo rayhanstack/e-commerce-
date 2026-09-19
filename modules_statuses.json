@@ -4,5 +4,7 @@
     "Customer": true,
     "Catalog": true,
     "Inventory": true,
-    "Barcode": true
+    "Barcode": true,
+    "Order": true,
+    "Pos": true
 }

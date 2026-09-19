@@ -28,7 +28,14 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Modules\\": "Modules/"
+            "Modules\\Auth\\": "Modules/Auth/app/",
+            "Modules\\Barcode\\": "Modules/Barcode/app/",
+            "Modules\\Catalog\\": "Modules/Catalog/app/",
+            "Modules\\Core\\": "Modules/Core/app/",
+            "Modules\\Customer\\": "Modules/Customer/app/",
+            "Modules\\Inventory\\": "Modules/Inventory/app/",
+            "Modules\\Order\\": "Modules/Order/app/",
+            "Modules\\Pos\\": "Modules/Pos/app/"
         }
     },
     "autoload-dev": {
@@ -58,7 +65,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "Illuminate\\Foundation\\ComposerScripts::forcePublish"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -75,11 +82,6 @@
     "extra": {
         "laravel": {
             "dont-discover": []
-        },
-        "merge-plugin": {
-            "include": [
-                "Modules/*/composer.json"
-            ]
         }
     },
     "config": {

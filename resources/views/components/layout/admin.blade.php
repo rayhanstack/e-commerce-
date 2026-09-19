@@ -64,6 +64,20 @@
                         </a>
                     </li>
 
+                    <div class="sidebar-section-title-light">Sales & POS</div>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.orders.index') }}" class="sidebar-nav-link-light {{ request()->routeIs('admin.orders.*') ? 'active' : '' }}">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>Orders & Invoices</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('pos.index') }}" target="_blank" class="sidebar-nav-link-light">
+                            <i class="fa-solid fa-cash-register"></i>
+                            <span>POS Terminal</span>
+                        </a>
+                    </li>
+
                     <div class="sidebar-section-title-light">Inventory Control</div>
                     <li class="nav-item">
                         <a href="{{ route('admin.inventory.stocks.index') }}" class="sidebar-nav-link-light {{ request()->routeIs('admin.inventory.stocks.*') ? 'active' : '' }}">
